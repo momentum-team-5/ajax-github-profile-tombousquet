@@ -21,15 +21,13 @@ fetch(url)
     name.innerText = 'Name ' + data.name
     listItem.appendChild(name)
     let github = document.createElement('a')
-    github.href = data.html_url
-    github.innerText = 'GitHub Url: ' + data.login
+    github.innerHTML = `GitHub Url: <a href = ${data.html_url}>${data.login}</a>`
     listItem.appendChild(github)
     let company = document.createElement('p')
     company.innerText = 'Company ' + data.company
     listItem.appendChild(company)
-    let website = document.createElement('a')
-    website.href = data.blog
-    website.innerText = 'LinkedIn: ' + data.name
+    let website = document.createElement('p')
+    website.innerHTML = `LinkedIn: <a href =${data.website}>${data.name}</a>`
     let list2 = document.createElement('ul')
     landingZone.appendChild(list2)
     listItem.appendChild(website)
