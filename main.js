@@ -20,8 +20,9 @@ fetch(url)
     let name = document.createElement('p')
     name.innerText = 'Name ' + data.name
     listItem.appendChild(name)
-    let github = document.createElement('p')
-    github.innerText = 'GitHub Url ' + data.html_url
+    let github = document.createElement('a')
+    github.href = data.html_url
+    github.innerText = "GitHub Url: " + data.login
     listItem.appendChild(github)
     let company = document.createElement('p')
     company.innerText = 'Company ' + data.company
